@@ -21,3 +21,7 @@ func Errorf(fields Fields, fmt string, args ...interface{}) {
 func Fatalf(fields Fields, fmt string, args ...interface{}) {
 	log.WithFields(fields).Fatalf(fmt, args...)
 }
+
+func Infof(fields Fields, fmt string, args ...interface{}) {
+	log.WithFields(fields).Infof(fmt, args...)
+}
