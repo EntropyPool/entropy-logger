@@ -17,3 +17,7 @@ func init() {
 func Errorf(fields Fields, fmt string, args ...interface{}) {
 	log.WithFields(fields).Errorf(fmt, args...)
 }
+
+func Fatalf(fields Fields, fmt string, args ...interface{}) {
+	log.WithFields(fields).Fatalf(fmt, args...)
+}
