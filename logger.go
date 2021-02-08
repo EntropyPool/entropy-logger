@@ -25,3 +25,7 @@ func Fatalf(fields Fields, fmt string, args ...interface{}) {
 func Infof(fields Fields, fmt string, args ...interface{}) {
 	log.WithFields(fields).Infof(fmt, args...)
 }
+
+func Debugf(fields Fields, fmt string, args ...interface{}) {
+	log.WithFields(fields).Debugf(fmt, args...)
+}
