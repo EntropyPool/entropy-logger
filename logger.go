@@ -29,3 +29,12 @@ func Infof(fields Fields, fmt string, args ...interface{}) {
 func Debugf(fields Fields, fmt string, args ...interface{}) {
 	log.WithFields(fields).Debugf(fmt, args...)
 }
+
+func SetLevel(levelStr string) error {
+	level, err := logrus.ParseLevel(levelStr)
+	if err != nil {
+		return err
+	}
+	log.SetLevel(level)
+	return nil
+}
